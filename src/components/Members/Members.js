@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Members = (props) => {
-    console.log(props.member);
+    // console.log(props.member.Salary);
     const { Name, Age, Profession, Salary, img } = props.member;
     return (
         <div className="col">
@@ -12,7 +12,7 @@ const Members = (props) => {
                     <h6 className="card-text text-muted">Age:<small> {Age}</small></h6>
                     <h6 className="card-text text-muted">Profession:<small> {Profession}</small></h6>
                     <h6 className="card-text text-muted">Salary:<small> {Salary}</small></h6>
-                    <button className="btn btn-success"><i class="fas fa-cart-plus"></i> Add To Cart</button>
+                    <button onClick={() => props.handleToCart(props.member)} className="btn btn-success"><i className="fas fa-cart-plus"></i> Add To Cart</button>
                 </div>
                 <div className="card-footer ">
                     <h2 style={{ display: 'flex', justifyContent: 'space-between' }}>
